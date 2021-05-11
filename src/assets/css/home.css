@@ -1,0 +1,284 @@
+.search_bar{
+    width:15.5rem;
+    height:1.75rem;
+    position: absolute;
+    top:.8rem;
+    left:50%;
+    margin-left:-7.75rem;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:900;
+}
+
+.search_bar .tomap{
+    width:1.2rem;
+    height:1.2rem;
+    border-radius:.6rem;
+    border:1px solid #fff;
+    text-align:center;
+    line-height:1.2rem;
+    color:#fff;
+}
+
+.search_con{
+    width:14rem;
+    height:1.75rem;
+    border-radius:.2rem;
+    background-color:rgba(255,255,255,0.8);  
+    display:flex;
+    align-items:center;
+}
+
+.city{
+    width:2rem;
+    height:1.75rem;
+    font-size:.3rem;
+    color:#333;
+    display: flex;
+    align-items:center;
+    text-indent:.575rem;
+    background-size:11.5rem;
+      
+}
+.icon-xialajiantouxiangxia{
+    padding-right:.25rem;
+}
+.icon-fangdajing{
+    padding:0 .25rem;
+}
+.village{
+    width:7rem;
+    height:.75rem;
+    border-left:.025rem solid #333;
+    font-size:.3rem;
+    color:#999;
+    display: flex;
+    align-items:center;
+    background-size:11.5rem;
+}
+
+/* 轮播图样式 */
+.slide_con{
+    height:10.6rem;
+    touch-action: none;
+}
+.slide_con img{
+    width:100%;
+}
+
+/* 菜单的样式 */
+.menu_con{
+    background-color: #fff;
+    margin-top:.5rem;
+    display:flex;
+}
+
+.menu_con li{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width:25%;
+}
+
+.menu_con li a{
+    width:2.8rem;
+    line-height:2.8rem;
+    border-radius:50%;
+    margin-top:1.1rem;
+    background-size:11.5rem;
+    background-color: #e9fcf3;
+    text-align:center;
+}
+
+.menu_con li i{
+    color:#00a563;
+    font-size:1.4rem;
+}
+
+.menu_con li h4{
+    font-size:.6rem;
+    color:#333;
+    margin-top:.5rem;
+    margin-bottom:.95rem;
+}
+
+/* 租房小组、资讯的样式 */
+.model{
+    background-color: #fff;
+    margin-top:.5rem;
+    overflow: hidden;
+}
+
+.model2{
+    overflow: hidden;
+}
+
+.model h3,.model2 h3{
+    width:17.75rem;
+    line-height:.75rem;
+    font-size:.75rem;
+    color:#333;
+    text-indent:.5rem;
+    border-left:.075rem solid #00a563;
+    margin:.8rem auto 0;
+}
+
+.title_con{
+    width:17.75rem;
+    height:.75rem;
+    margin:.8rem auto 0; 
+}
+
+.title_con h3{
+    width:10rem;
+    margin:0rem;
+    float:left;
+}
+
+.title_con a{
+    float:right;
+    width:.375rem;
+    height:.65rem;
+    color:#cecece;
+    font-size:.7rem;
+}
+
+.house_list{
+    width:17.75rem;    
+    overflow: hidden;
+    margin:.8rem auto 0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.house_list li{
+    width:8.625rem;
+    margin-bottom:.5rem;
+    background-color: #fff;
+    box-sizing:border-box;
+    padding:.25rem;
+}
+
+.house_list li p{
+    font-size:0.7rem;
+    color:#333;
+    text-indent:.5rem;
+    margin-top:.5rem;
+    color:#333;
+}
+
+.house_list li span{
+    font-size:.325rem;
+    text-indent:.5rem;
+    margin-top:.2rem;
+    color:#999;
+}
+
+.house_list li img{
+    width:3rem;
+    margin-right:.2rem
+}
+
+.list{
+    overflow: hidden;
+    margin-top:1rem;    
+}
+
+.list li{
+    display:flex;
+    background-color: #fff;
+    margin:0rem 1rem .5rem 1rem;
+    padding-bottom:.5rem;
+    border-bottom:1px solid #ddd;
+}
+
+.list li a{
+    width:8.25rem;
+    height:4.625rem;
+    border-radius:.2rem;
+    overflow: hidden;    
+}
+
+.list li a img{
+    width:100%;
+}
+
+
+.list li .detail_list{
+    width:8rem;
+    margin-left:.7rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detail_list h4{
+    font-weight:bold;
+    color:#333;
+    font-size:.7rem;
+    white-space:wrap;
+}
+
+.list li .detail_list{
+    font-size:12px;
+    color: #9c9fa1
+}
+
+.list li .detail_list .detail{
+    display:flex;
+    justify-content: space-between;
+}
+
+.mb120{
+    margin-bottom:3rem;
+}
+
+/* layout的样式 */
+
+body{
+    background-color: #eeeff4;
+}
+footer{
+    background-color: #fff;
+    width:100%;
+    height:2.5rem;
+    position: fixed;
+    left:0;
+    bottom:0;
+}
+
+footer ul{
+    display:flex;
+}
+
+footer li{
+    width:25%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+footer li .iconfont{
+    width:1.1rem;
+    line-height:1.1rem;
+    margin-top: .325rem;
+    font-size:1.2rem;
+    text-align:center;
+    color:#8f949b;
+}
+
+footer li h4{
+    font-size:.6rem;
+    color:#8f949b;
+    margin:.1rem 0 .2rem;
+}
+
+footer .active h4{
+    color:#00a15b;
+}
+
+footer .active a{
+    color:#00a15b;
+}

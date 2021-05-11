@@ -1,0 +1,283 @@
+body{
+    background-color: #eeeff4;
+}
+
+.detail_back{
+    position:absolute;
+    left:.75rem;
+    top:.75rem;
+    width:.675rem;
+    height:1.075rem;
+    background-size:1.35rem;
+    font-size:1rem;
+    color:#fff;
+    z-index:10;
+}
+
+.detail_slide_con{
+    width:100%;
+    height:10.375rem;
+    overflow: hidden;
+     /* 解决轮播图滑动报错的问题 */
+     touch-action: none;
+}
+
+.detail_slide_con img{
+    width:100%;
+    display:block;
+}
+
+.detail_info{
+    background-color: #fff;
+    overflow: hidden;
+    margin-top:.5rem;
+}
+
+.detail_more{
+    width:93%;
+    margin:0 auto;
+    border-bottom:1px solid #ddd;
+    padding-bottom:.8rem;
+}
+
+.detail_more h3{
+    font-size: 16px;
+    color: #333;
+    margin-top:.8rem;
+}
+
+.more2{
+    display:flex;
+}
+
+.more2 li{
+    width:30%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    flex-grow:1;
+}
+
+.more2 li span{
+    color: #fa5741;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:.8rem;
+}
+
+.more2 li b{
+    color:#999;
+    font-size:14px;
+    font-weight:normal;
+    margin-top:8px;
+}
+
+.more2 li span em{
+    font-size:12px;
+    font-weight:normal;
+}
+
+.more3{
+    display:flex;
+    flex-wrap:wrap;
+    padding-top:.4rem;
+    border-bottom:0px;
+}
+
+.more3 li{
+    width:50%;
+    font-size:13px;
+    color:#333;
+    margin-top:.4rem;
+}
+
+.more3 li span{
+    color: #fa5741;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:.8rem;
+}
+
+.more3 li em{
+    color:#999;
+    padding-right:5px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 4px 5px;
+    margin-right: 5px;
+    line-height: 12px;
+  }
+  .tag0 {
+    color: #39becd;
+    background: #e1f5f8;
+  }
+  .tag1 {
+    color: #3fc28c;
+    background: #e1f5ed;
+  }
+  .tag2 {
+    color: #5aabfd;
+    background: #e6f2ff;
+  }
+  .tag3 {
+    color: #39becd;
+    background: #e1f5f8;
+  }
+  .tag4 {
+    color: #3fc28c;
+    background: #e1f5ed;
+  }
+  .tag5 {
+    color: #5aabfd;
+    background: #e6f2ff;
+  }
+
+  .map_title{
+      font-size:14px;
+      color:#666;
+      width:93%;
+      margin:.5rem auto;
+  }
+
+  .map_con{
+    width: 100%;
+    height: 9rem;
+    overflow: hidden;
+  }
+
+  .map_con img{
+    width:100%;
+    height: 9rem;
+  }
+
+.detail_common_title{
+    width:93%;
+    font-weight: 600;
+    font-size: 15px;
+    margin:0 auto 10px;
+    padding:15px 0;
+    color:#666;
+    border-bottom: solid 1px #cecece;
+}
+
+.support_list{
+    width:93%;
+    margin:15px auto 0;
+    display:flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.support_list li{
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.support_list li i{
+    font-size:23px;
+    color:#666;
+}
+.support_list li b{
+    font-size:14px;
+    color:#666;
+    font-weight:normal;
+}
+
+.landlord{
+    display:flex;
+    align-items:flex-start;
+    width:93%;
+    margin:10px auto 0;
+    justify-content: space-between;
+}
+
+.landlord img{
+    width:52px;
+    height:52px;
+}
+
+.lorder{
+    font-size:14px;
+    font-weight:normal;
+    display:flex;
+   
+}
+
+.lorder b{
+    font-weight:normal;
+    margin-top:5px;
+}
+
+.lorder span{
+    font-size:12px;
+    color:#fa5741;
+    margin-top:5px;
+    
+}
+
+.lorder_name{
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+}
+
+.send_info{
+    color: #33be85;
+    border: solid 1px #33be85;
+    border-radius: 3px;
+    padding: 3px 15px;
+    font-size:14px;
+    align-self:center;
+
+}
+
+.detail_text{
+    width:93%;
+    margin:10px auto 0;
+    font-size:14px;
+    color:#666;
+    line-height:24px;
+    text-align:justify;
+    margin-bottom:3rem;
+}
+
+.down_btns{
+    width:100%;
+    height:2.5rem;
+    border-top:1px solid #ddd;
+    background-color: #fff;
+    position: fixed;
+    left:0;
+    bottom:0;
+    display:flex;
+}
+
+.down_btns li{
+    width:30%;
+    flex-grow:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#999;
+    font-size:17px;
+}
+
+.down_btns li:first-child{
+    border-right:1px solid #f0f0f0;
+}
+
+.down_btns .active{
+   
+    background-color: #21b97a;
+}
+
+.down_btns .active a{
+    color:#fff;
+}
