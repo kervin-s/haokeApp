@@ -4,54 +4,92 @@ import {BASE_URL} from '../../utils';
 import './home.scss'
 import store from '../../store'
 import {Carousel} from "antd-mobile";  //轮播图组件
+import City from '@/components/city/city.jsx';
 
 class SearchBar extends Component {
-    componentDidMount() {
+    constructor(props){
+        super(props);
+        this.state = {
+            oCurrentCity:store.getState(),
+            sClass:'city_wrap'
+        }
+
+        this.unsubscribe = store.subscribe(this.fnStoreChange)
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe()
+    }
+
+    fnStoreChange=()=>{
+        this.setState({
+            oCurrentCity:store.getState()
+        })
+    }
+
+    componentDidMount(){
+        // 去缓存中获取当前城市数据
         let sCurrentCity = sessionStorage.getItem('haoke_current_city');
-        // 判断下本地是否有缓存数据
-        if (sCurrentCity) {
+        if(sCurrentCity){
             // 如果能获取到当前城市数据,将这个数据存到数据中心，方便其他组件使用
+            /*
+              let action = {
+                  type:'change_current_city',
+                  value:JSON.parse( sCurrentCity )
+              }
+              store.dispatch( action );
+              */
             store.dispatch({
-                type: 'change_current_city',
-                value: JSON.parse(sCurrentCity)
+                type:'change_current_city',
+                value:JSON.parse( sCurrentCity )
             });
-        } else {
+        }else{
+            // 如果获取不到当前城市数据
+
             // BMap对象在组件内访问不到，可以去window对象上获取
             let BMap = window.BMap;
-            // 调用IP定位
+
+            // 将上面的代码简化成下面的写法：
             let myCity = new BMap.LocalCity();
-            // 定位成功后的钩子函数
-            myCity.get(async (r) => {
-                let {data: {body: cityData}} = await this.axios.get('/area/info?name=' + r.name)
-                sessionStorage.setItem('haoke_current_city', JSON.stringify(cityData))
+
+            myCity.get(async result=>{
+                //alert("当前定位城市:"+cityName);
+                let cityName = result.name;
+
+                // 请求一个接口，验证定位到的城市名是否在公司业务范围内
+                let oRes = await this.axios.get('/area/info?name='+cityName);
+                //console.log(oRes);
+
+                // 将返回的在公司业务范围内的城市数据存储到sessionStorage中
+                sessionStorage.setItem('haoke_current_city',JSON.stringify( oRes.data.body ))
+
                 // 同时在数据中心也存储一份
                 store.dispatch({
-                    type: 'change_current_city',
-                    value: cityData
+                    type:'change_current_city',
+                    value:oRes.data.body
                 });
-            })
+
+            });
         }
     }
 
-    fnSwitch = (sClass) => {
+    fnSwitch=(sClass)=>{
         this.setState({
             sClass
         })
     }
 
-    render() {
+    render(){
         return (
             <div className="search_bar">
                 <div className="search_con">
-                    <span className="city">深圳</span>
+                    <span className="city" onClick={ ()=>this.fnSwitch('city_wrap slideUp') }>{this.state.oCurrentCity.label}</span>
                     <i className="iconfont icon-xialajiantouxiangxia"></i>
-                    <span className="village" onClick={() => {
-                        this.fnSwitch('city_wrap slideUp')
-                    }}><i className="iconfont icon-fangdajing"></i> {/*this.state.oCurrentCity.label*/}</span>
+                    <span className="village"><i className="iconfont icon-fangdajing"></i> 请输入小区名</span>
+                    <City sClass={this.state.sClass} fnSwitch={ this.fnSwitch } />
                 </div>
-                <i className="iconfont icon-ic-maplocation-o tomap"></i>
+                <i className="iconfont icon-ic-maplocation-o tomap" onClick={ ()=>this.props.history.push('/map') }></i>
             </div>
-
         )
     }
 }
@@ -214,4 +252,5 @@ class Home extends Component {
         );
     }
 }
+
 export default Home;

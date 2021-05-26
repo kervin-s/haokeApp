@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Link, Route} from "react-router-dom";
 import './layout.scss'
-import Home from '../home/home';
-import Info from '../info/info';
-import User from '../user/user';
-import HouseList from "../houseList/houseList";
+import Home from '@/pages/home/home';
+import Info from '@/pages/info/info';
+import User from '@/pages/user/user';
+import HouseList from '@/pages/houseList/houseList';
 
 // 定义自定义路由组件
 const CustomLink = ({label, to, exact, sClass}) => {
