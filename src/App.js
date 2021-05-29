@@ -8,7 +8,7 @@ function App() {
         <HashRouter>
             <Switch>
                 <Route path='/layout' component={Layout}/>
-                {/* 加上exact是为了让path精确匹配，否则“/”和“/china”的路径会同时匹配 */}
+                {/* 加上exact是为了让path精确匹配，否则“/”和“/china”的路径会同时匹配  */}
                 <Redirect exact from="/" to="/layout"/>
             </Switch>
         </HashRouter>
