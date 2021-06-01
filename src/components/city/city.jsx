@@ -44,6 +44,8 @@ function fnFormatName(sTr) {
 class City extends Component {
   constructor(props) {
     super(props);
+    const { sClass, fnSwitch } = props;
+    console.log( sClass, fnSwitch );
     this.state = {
       oCurrentCity: store.getState(),
       oCityList: {},
