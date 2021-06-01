@@ -153,7 +153,7 @@ function Menu() {
                 <h4>合租</h4>
             </li>
             <li>
-                <Link to="/"><i className="iconfont icon-ic-maplocation-o"/></Link>
+                <Link to="/map"><i className="iconfont icon-ic-maplocation-o"/></Link>
                 <h4>地图找房</h4>
             </li>
             <li>
