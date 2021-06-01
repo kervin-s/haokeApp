@@ -1,0 +1,36 @@
+.search_con{
+    width:14rem;
+    height:1.75rem;
+    border-radius:.2rem;
+    background-color:rgba(255,255,255,0.8);  
+    display:flex;
+    align-items:center;
+}
+
+.city{
+    width:2rem;
+    height:1.75rem;
+    font-size:.3rem;
+    color:#333;
+    display: flex;
+    align-items:center;
+    text-indent:.575rem;
+    background-size:11.5rem;
+      
+}
+.icon-xialajiantouxiangxia{
+    padding-right:.25rem;
+}
+.icon-fangdajing{
+    padding:0 .25rem;
+}
+.village{
+    width:7rem;
+    height:.75rem;
+    border-left:.025rem solid #333;
+    font-size:.3rem;
+    color:#999;
+    display: flex;
+    align-items:center;
+    background-size:11.5rem;
+}
