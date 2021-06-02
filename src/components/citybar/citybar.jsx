@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import City from "../city/city";
 import "./citybar.scss";
-import store from "@/pages/store";
+import store from "@/store";
 
 export default class cityBar extends Component {
   constructor(props) {

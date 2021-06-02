@@ -187,18 +187,6 @@ class Map extends Component {
         
     }
 
-    /* 
-        {
-            desc: "三室/82/东南/倚山花园三期"
-            houseCode: "5cc49f441439630e5b4f89ba"
-            houseImg: "/newImg/7bk5h7llh.jpg"
-            price: 15000
-            tags: ["近地铁"]
-            title: "优质房源 精致装修 环境安静优美 适合居住"
-        }    
-    */
-    
-
     render() {
         let { aHoustList } = this.state;
         return (
